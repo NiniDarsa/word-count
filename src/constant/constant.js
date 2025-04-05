@@ -2,7 +2,7 @@
 export const regexNonAlphanumericString = /^[^\w\s]+$/; // Matches strings made up of only non-alphanumeric characters
 export const regexRemovePunctuationAndUnderscore = /[^\w\s]|_/g; // Matches any non-alphanumeric character or underscore
 
-export const linebreak = /[^\n]*\n[^\n][a-z]*/gi;
+export const linebreak = /[^\n]*\n[^\n]*[a-z][^\n]*/gi;
 export const whiteSpace = /\s+/g;
 
 /*Limit */
