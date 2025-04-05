@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { punctuationMarks } from "../constant/constant";
+import { regexRemovePunctuationAndUnderscore } from "../constant/constant";
 
 const KeyWord=({arr,text,setText,arrOfNames})=>{
   //unique array
@@ -7,7 +7,6 @@ const KeyWord=({arr,text,setText,arrOfNames})=>{
   
    const arrayUniqueByKey = [...new Map(arr.map(item =>
    [item[key], item])).values()];
- console.warn(arrayUniqueByKey)
 
    //Occurence
   function getOccurrence(array, value) {
@@ -45,7 +44,7 @@ const KeyWord=({arr,text,setText,arrOfNames})=>{
             className="li"
             onMouseOver={handleHover}
             onMouseLeave={handleLeave}
-            key={indx}>{item.name.replace(/[^\w\s]|_/g, '')}</li>
+            key={indx}>{item.name.replace(regexRemovePunctuationAndUnderscore, '')}</li>
             }
           })}
          </StyleContainer>
@@ -54,7 +53,7 @@ const KeyWord=({arr,text,setText,arrOfNames})=>{
           <h4>Occurency</h4>
           {arrayUniqueByKey&&arrayUniqueByKey.map((item,index)=>{
             if(item.clicked){
-              return <li key={index}><span>{item.name.replace(/[^\w\s]|_/g, '')}-</span>{getOccurrence(arrOfNames,item.name)}X</li>
+              return <li key={index}><span>{item.name.replace(regexRemovePunctuationAndUnderscore, '')}-</span>{getOccurrence(arrOfNames,item.name)}X</li>
             }
           })}
         </StyleContainer>

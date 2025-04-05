@@ -1,9 +1,9 @@
-import { punctuationMarks, whiteSpace } from "../constant/constant"
+import { regexNonAlphanumericString, whiteSpace } from "../constant/constant"
 
 function cleanText(text){
     return text.replaceAll(whiteSpace, " ")
     .split(" ")
-    .filter((word)=>{return word!==""&&!word.match(punctuationMarks)})
+    .filter((word)=>{return word!==""&&!word.match(regexNonAlphanumericString)})
 }
 export default cleanText
 
