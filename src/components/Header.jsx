@@ -20,7 +20,7 @@ position: relative;
 
 div{
 height: 100%;
-background-image: url("src/back.jpg");
+background-image: url("/back.jpg");
 background-position: center; 
 background-repeat: no-repeat; 
 background-size: cover;
