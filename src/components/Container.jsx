@@ -84,7 +84,6 @@ export default Container
 const StyleMain=styled.div`
  flex:4;
  width: 100%;
- border: 2px solid blue;
  position: relative;
 `;
 const Stylediv=styled.div`
