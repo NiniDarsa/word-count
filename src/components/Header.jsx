@@ -31,7 +31,7 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 4rem;
+    font-size: clamp(1.5rem, 5vw, 4rem);
     text-transform: uppercase;
     font-weight: 200;
     letter-spacing: 15px;
@@ -39,5 +39,12 @@ h1{
       font-weight: 800;
       text-shadow: 1px 1px 15px blue;
     }
+    @media (max-width: 600px) {
+  
+    letter-spacing: 5px;
+    font-size: clamp(1.2rem, 6vw, 2.5rem);
+  
+}
+
 }
 `;

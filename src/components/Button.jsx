@@ -22,4 +22,6 @@ const StButton=styled.button`
     cursor: pointer;
     background-color: aliceblue;
     border: none;
+  
+
 `;

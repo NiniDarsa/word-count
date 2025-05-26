@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Word from "./Word"
 import Button from "./Button"
 
-const HighlitText=({ open, setOpen,  arr,setArr,newArr})=>{
+const HighlitText=({ open, setOpen,  arr,setArr})=>{
     return(
        open&&<StDiv>
         { 

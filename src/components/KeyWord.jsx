@@ -68,6 +68,7 @@ const StDiv=styled.div`
  display: flex;
  flex-direction: column;
  justify-content: space-evenly;
+ 
  h4{
     text-align: center; 
     text-decoration: underline;
@@ -85,4 +86,5 @@ const StDiv=styled.div`
   padding: 0.5rem;
   width: 20rem;
   word-wrap: break-word;
+   
  `

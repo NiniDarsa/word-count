@@ -88,7 +88,7 @@ const StyleMain=styled.div`
 `;
 const Stylediv=styled.div`
     width: 80%;
-    height: 110%;
+    min-height: 110%;
     background-color: aliceblue;
     border-radius: .4rem;
     position: absolute;
@@ -98,6 +98,9 @@ const Stylediv=styled.div`
     z-index: 100;
 
     display: flex;
+   @media (max-width: 800px) {
+ flex-direction: column;
+}
     p{
      color: red;
      position: absolute;
