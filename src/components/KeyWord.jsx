@@ -37,7 +37,8 @@ const KeyWord=({arr,text,setText,arrOfNames})=>{
     return(
         <StDiv>
           <StyleContainer>
-          <h4>Key Words</h4>
+          <h2>Key Words</h2>
+          <ul>
           {arrayUniqueByKey&&arrayUniqueByKey.map((item,indx)=>{
             if(item.clicked){       
             return <li 
@@ -46,16 +47,17 @@ const KeyWord=({arr,text,setText,arrOfNames})=>{
             onMouseLeave={handleLeave}
             key={indx}>{item.name.replace(regexRemovePunctuationAndUnderscore, '')}</li>
             }
-          })}
+          })}</ul>
          </StyleContainer>
 
          <StyleContainer>
-          <h4>Occurency</h4>
+          <h2>Occurency</h2>
+          <ul>
           {arrayUniqueByKey&&arrayUniqueByKey.map((item,index)=>{
             if(item.clicked){
               return <li key={index}><span>{item.name.replace(regexRemovePunctuationAndUnderscore, '')}-</span>{getOccurrence(arrOfNames,item.name)}X</li>
             }
-          })}
+          })}</ul>
         </StyleContainer>
         </StDiv>
     )
@@ -68,10 +70,13 @@ const StDiv=styled.div`
  display: flex;
  flex-direction: column;
  justify-content: space-evenly;
- 
- h4{
+ ul{
+  list-style-type: none;
+ }
+ h2{
     text-align: center; 
     text-decoration: underline;
+    font-size: 1rem;
  }
  .li{
   cursor: pointer;

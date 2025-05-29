@@ -18,7 +18,7 @@ const StButton=styled.button`
     width: 20%;
     padding: .5rem;
     border-radius: .1rem;
-    color: grey;
+    color: black;
     cursor: pointer;
     background-color: aliceblue;
     border: none;
